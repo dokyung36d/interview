@@ -7,7 +7,7 @@
 - [Network](#Network)
 - [Algorithm](#Algorithm)
 - [Data Structure](#ata-Structure)
-- [Spring](#Spring)
+- [Spring(백엔드)](#Spring(백엔드))
 - [DeepLearning(Option)](#DeepLearning(Option))
 
 
@@ -143,7 +143,7 @@
     <p>장점 : 데이터 동기화 -> 일관성있는 데이터, 높은 가용성(하나의 DB가 죽더라도 에러 X), 로드 밸런싱</p>
     <p>단점 : 저장소 하나를 공유할 경우 병목현상 발생, 운영 비용 상승</p></br>
     <p>리플리케이션 : 여러 개의 DB를 수직적인 구조로 구축, 비동기 방식</p>
-    <p>w장점 : 대부분의 DB 요청은 읽기 요청, 레플리케이션으로도 충분한 성능, 지연 시간 거의 없음</p>
+    <p>장점 : 대부분의 DB 요청은 읽기 요청, 레플리케이션으로도 충분한 성능, 지연 시간 거의 없음</p>
     <p>단점 : 노드 들간의 데이터 동기화가 보장되지 않음. Master DB가 고장날 경우 복구 및 대처 어려움</p>
 </details>
 
@@ -167,7 +167,31 @@
 
 ## Algorithm
 
-## Spring
+## Spring(백앤드)
+
+<details>
+    <summary>Web Application Server와 Web Server의 차이점</summary>
+    </br>
+    <P>Web Application Server : 비즈니스 로직을 넣을 수 있음. 주로 동적인 컨텐츠를 담당함(DB 접근, 데이터 처리)</p>
+    <P>Web Server : 비즈니스 로직을 담당할 수 없음. 주로 정적인 콘텐츠를 담당함. (HTTP, JavaScript, CSS등)</p>
+</details>
+
+<details>
+    <summary>Spring Framework의 특징</summary>
+    </br>
+    <p>1. 컨테이너를 통해 객체를 직접 관리</p>
+    <P>2. 제어의 역전(IoC) : 제어권이 개발자가 아닌 프레임워크가 가지고 있어 프레임워크가 개발자의 코드를 호출한다.</p>
+    <P>3. 의존성 주입(DI) : 계층, 서비스에서 의존성이 존재할 경우 외부에서 주입해준다.</p>
+    <P>4. 관점 지향 프로그래밍(AOP) : 보안 등과 같이 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리한다.</p>
+</details>
+
+<details>
+    <summary>@RequestBody, @RequestParam, @ModelAttribute의 차이점</summary>
+    </br>
+    <p>@RequestBody : 클라이언트가 전송한 JSON형태의 HTTP Body 내용을 java 객체로 변환해주는 역할</p>
+    <p>@RequestParam : 1개의 HTTP 요청 parameter를 받기 위해 사용</p>
+    <p>@ModelAttribute : HTTP내부의 값들을 Getter, Setter, 생성자를 통해 주입하기 위해 사용. (Getter, Setter, 생성자는 미리 정의되어 있어야 함)</p>
+</details>
 
 ## Data Structure
 
