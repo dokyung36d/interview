@@ -193,6 +193,46 @@
     <p>@ModelAttribute : HTTP내부의 값들을 Getter, Setter, 생성자를 통해 주입하기 위해 사용. (Getter, Setter, 생성자는 미리 정의되어 있어야 함)</p>
 </details>
 
+<details>
+    <summary>Spring MVC란</summary>
+    </br>
+    <p>Model : 데이터 관리 및 비즈니스 로직을 처리하는 부분</p>
+    <p>View : 비즈니스 로직의 처리 결과를 통해 유저 인터페이스가 표현되는 구간</p>
+    <p>Controller : 사용자의 용청을 처리하고 Model과 View사이를 중개하는 역할</p>
+</details>
+
+<details>
+    <summary>MVC의 추가 구성요소(MVC 제외)</summary>
+    </br>
+    <p>DispatcherServlet : 클라이언트에게 요청을 받아 응답까지의 MVC 처리 과정을 통제</p>
+    <p>HandlerMapping : 클라이언트의 요청 URL을 처리할 Controller를 결정</p>
+    <p>HandlerAdapter : HandlerMapping을 통해 결정된 핸들러 정보로 해당 메소드를 직접 호출해주는 역할</p>
+    <p>ViewResolver : Controller의 처리 결과를 생성할 View를 결정</p>
+</details>
+
+<details>
+    <summary>Spring MVC의 전체적인 흐름</summary>
+    </br>
+    <p>1. 클라언트가 URL을 통해 요청을 전송</p>
+    <p>2. Dispatcher Servlet은 해당 요청을 처리할 컨트롤러를 찾는다.</p>
+    <p>3. Dispatcher Servlet은 핸들러 어댑터에게 요청의 전달을 맡김</p>
+    <p>4. Handler Adpater는 해당 컨트롤러에게 요청을 전달.</p>
+    <p>5. 컨트롤러는 비즈니스 로직을 처리한 후 반환할 뷰의 이름을 반환</p>
+    <p>6. Dispatcher Sevlet은 ViewResolver를 통해 반환할 뷰를 결정</p>
+    <p>7. Dispatcher Servlet은 View에 전달할 데이터를 추가한다.</p>
+    <p>8. 데이터가 추가된 View를 반환한다.</p>
+</details>
+
+<details>
+    <summary>스프링 빈의 라이프사이클</summary>
+    </br>
+    <p>스프링 IoC 컨테이너 생성 -> 스프링 빈 생성 -> 의존 관계 주입 -> 초기화 콜백 메소드 호출 -> 사용 -> 소멸 전 콜백 메소드 호출 -> 스프링 종료</p>
+    <p>빈 생명주기 콜백 방법</p>
+    <p>1. 인터페이스(InitilaizingBean, DisposableBean)</p>
+    <p>2. 설정 정보에 초기화 메소도, 종료 메소드 지정, @Bean에서 지정</p>
+    <p>3. @PostConstruct, @PreDestroy 어노테이션 지원</p>
+
+</details>
 
 ## Data Structure
 
