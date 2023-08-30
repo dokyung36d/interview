@@ -106,10 +106,59 @@
 <details>
     <summary>DB 튜닝이란</summary>
     </br>
-    <p>1단계 : DB설계 튜닝</p>
+    <p>1단계 : DB설계 튜닝 (데이터 모델링, 인덱스 설계, 용량 산정)</p>
+    <p>2단계 : DBMS 튜닝 (CPU, 메모리, I/O 관점) ex) Buffer크기, Cache 크기</p>
+    <p>3단계 : SQL 튜닝 (Join, Indexing, SQL Executing Plan)</p>
+    <p></p>
+</details>
+
+<details>
+    <summary>inner join과 outer join의 차이</summary>
+    </br>
+    <p>inner join : 서로 연관된 내용만을 검색하는 조인</p>
+    <p>outer join : 한쪽에 데이터가 없더라도 데이터가 있는 쪽의 내용을 전부 출력하는 조인</p>
+    <p>outer ㅓoin에는 Left, Right, FULL outer join이 존재함</p>
+</details>
+
+<details>
+    <summary>group by의 역할</summary>
+    </br>
+    <p>특정 column을 기준으로 연산한 결과를 집계 키로 설정하여 그룹을 지음 </p>
     <p></p>
     <p></p>
-    <p></p>
+</details>
+
+<details>
+    <summary>DELETE, TRUNCATE, DROP의 차이점</summary>
+    </br>
+    <p>DELETE : 데이터는 지우지만 테이블 용량은 줄어들지 않음. 삭제 후 복구 가능</p>
+    <p>TRUNCATE : 전체 데이터를 삭제하는 방법. 테이블의 용량은 줄어듦. 인덱스도 삭제됨. 테이블은 삭제되지 않지만 데이터는 복구할 수 없음</p>
+    <p>DROP : 테이블 자체를 완전히 삭제하는 방식. 삭제 후 복구 불가</p>
+</details>
+
+<details>
+    <summary>데이터베이스 클러스터링과 리플리케이션의 차이</summary>
+    </br>
+    <p>클러스터링 : 여러 개의 DB를 수평적인 구조로 구축, 동기 방식</p>
+    <p>장점 : 데이터 동기화 -> 일관성있는 데이터, 높은 가용성(하나의 DB가 죽더라도 에러 X), 로드 밸런싱</p>
+    <p>단점 : 저장소 하나를 공유할 경우 병목현상 발생, 운영 비용 상승</p></br>
+    <p>리플리케이션 : 여러 개의 DB를 수직적인 구조로 구축, 비동기 방식</p>
+    <p>w장점 : 대부분의 DB 요청은 읽기 요청, 레플리케이션으로도 충분한 성능, 지연 시간 거의 없음</p>
+    <p>단점 : 노드 들간의 데이터 동기화가 보장되지 않음. Master DB가 고장날 경우 복구 및 대처 어려움</p>
+</details>
+
+<details>
+    <summary>HAVING과 WHERE의 차이</summary>
+    </br>
+    <p>HAVING : 그룹을 필터링하는데 사용(그룹화 혹은 집계 이후)</p>
+    <p>WHERE : 개별 행을 필터링 하는데 사용(그룹화 혹은 집계 이전)</p>
+</details>
+
+<details>
+    <summary>JOIN에서의 ON과 WHERE의 차이</summary>
+    </br>
+    <p>ON : JOIN이 시작되지 이전에 필터링을 진행</p>
+    <p>WHERE : JOIN이 진행된 이후 해당 조건에 맟춰 필터링을 진행</p>
 </details>
 
 ## OS
