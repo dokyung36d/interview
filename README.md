@@ -7,8 +7,8 @@
 - [Network](#Network)
 - [Algorithm](#Algorithm)
 - [Data Structure](#Data-Structure)
-- [Spring(백엔드)](#Spring(백엔드))
-- [DeepLearning(Option)](#DeepLearning(Option))
+- [Spring(백엔드)](#Spring백엔드)
+- [DeepLearning(Option)](#DeepLearning)
 
 
 ## DataBase
@@ -167,7 +167,7 @@
 
 ## Algorithm
 
-## Spring(백엔드)
+## Spring백엔드
 
 <details>
     <summary>Web Application Server와 Web Server의 차이점</summary>
@@ -236,4 +236,4 @@
 
 ## Data Structure
 
-## DeepLearning(Option)
+## DeepLearning
