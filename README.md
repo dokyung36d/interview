@@ -231,7 +231,30 @@
     <p>1. 인터페이스(InitilaizingBean, DisposableBean)</p>
     <p>2. 설정 정보에 초기화 메소도, 종료 메소드 지정, @Bean에서 지정</p>
     <p>3. @PostConstruct, @PreDestroy 어노테이션 지원</p>
+</details>
 
+<details>
+    <summary>Spring Filter와 Interceptor란, 사용예시</summary>
+    </br>
+    <p>필터 : 요청과 응답을 거른 뒤 정제하는 역할, 톰캣과 같은 웹 컨테이너에 의해 관리, 스프링 범위 밖에서 처리</p>
+    <p>사례 : 보안 인증, 인가, 요청 검사, 데이터 압축 및 인코딩, Spring과 분리하고자 하는 기능</p>
+    <p>Interceptor : 요청에 대한 작업 전/후로 요청, 참조를 가로채 가공. 스프링 컨텍스트에서 동작함.</p>
+    <p>사례 : 세부적인 보안 및 인증, Controller로 넘겨주는 데이터 가공</p>
+</details>
+
+<details>
+    <summary>AOP프로그래밍이란</summary>
+    </br>
+    <p>핵심 비즈니스 로직에 존재하는 공통 사랑을 분리하여 각각 모듈화하는 것을 의미.</p>
+    <p>주로 인증, 로깅, 트랜잭션 처리에 사용됨</p>
+    <p>장점 : 중복 코드 제거, 재활용성 극대화, 변화 수용 용이성</p>
+</details>
+
+<details>
+    <summary>Lombok 라이브러리란</summary>
+    </br>
+    <p>메소드를 컴파일 하는 과정에서 개입하여 추가적인 코드를 생성함.(어노테이션 프로세싱)</p>
+    <p>EX) Getter, Setter</p>
 </details>
 
 ## Data Structure
