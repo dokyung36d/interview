@@ -165,6 +165,31 @@
 
 ## Network
 
+<details>
+    <summary>HTTP프로토콜이란</summary>
+    </br>
+    <p>서버/클라이언트 모델을 따르는 데이터를 주고받기 위한 프로토콜</p>
+    <p>특징 1: stateless(상태 정보를 저장하지 않음)</p>
+    <p>특징 2: Connectionless(요청을 전송한 뒤 연결을 끊음.</p>
+    </br>
+    <p>장점 1: 연결 상태 처리, 상태 정보 관리 필요 X -> 서버 디자인 간단.</p>
+    <p>장점 2: 각각의 HTTP 요청에 독립적으로 전송해주면 됨</p>
+    </br>
+    <p>단점 1: 이전 통신에 대한 정보가 없으므로 매번 인증 필요</p>
+    <p>이를 해결하기 위해 쿠기, 세션을 활용</p>
+</details>
+
+<details>
+    <summary>구글 접속 과정</summary>
+    </br>
+    <p>1. 사용자가 웹 브라우저에 URL 입력</p>
+    <p>2. DNS서버를 이용하여 URL주소에 해당되는 IP 주소를 얻음</p>
+    <p>3. 해당 IP 주소로 TCP 연결 설정</p>
+    <p>4. 해당 웹 서버로 HTTP 요청 메시지를 보냄.</p>
+    <p>5. 웹 서버는 요청에 알맞은 HTTP 응답 메시지를 보냄</p>
+    <p>6. 클라이언트에게 도착한 HTTP 응답 메시지는 웹 페이지에 의해 변환, 출력됨.</p>
+</details>
+
 ## Algorithm
 
 ## Spring백엔드
@@ -255,6 +280,64 @@
     </br>
     <p>메소드를 컴파일 하는 과정에서 개입하여 추가적인 코드를 생성함.(어노테이션 프로세싱)</p>
     <p>EX) Getter, Setter</p>
+</details>
+
+<details>
+    <summary>서블릿(Servlet)이란?</summary>
+    </br>
+    <p>클라인언트의 요청을 처리, 결과를 반환하는 Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술.</p>
+</details>
+
+<details>
+    <summary>Servlet의 동작 방식</summary>
+    </br>
+    <p>1. 클라이언트가 URL을 입력한 경우 HTTP Request가 Servlet 콘테이너로 전송된다.</p>
+    <p>2. 요청을 받은 Servlet container는  HTTPServletRequest, HTTPServletResponse 객체를 생성</p>
+    <p>3. web.xml을 기준으로 요청된 URL에 해당되는 Servlet을 찾는다.</p>
+    <p>4. 해당 Servlet에서 service 메소드를 호출, 요청 방식에 따라 doGet(), doPost()를 호출</p>
+    <p>5. doGet(), doPost() 메소드는 페이지 생성, 이후 HTTPServletResponse 객체를 통해 응답.</p>
+    <p>6. 응답이 종료된 경우 HTTPServletRequest, HTTPServletResponse 객체를 삭제</p>
+</details>
+
+<details>
+    <summary>Spring의 싱글톤 패턴이란.</summary>
+    </br>
+    <p>Bean 설정 시 별다른 옵션이 존재하지 않는 경우 default로 설정됨.</p>
+    <p>요청이 들어올 때마다 객체를 새로 생성하지 않고, 기존에 존재하던 객체를 활용 -> 효율적인 사용이 가능함.</p>
+</details>
+
+<details>
+    <summary>Scope 프로토 타입 빈이란.</summary>
+    </br>
+    <p>기존의 싱글톤과 반대되는 개념.</p>
+    <p>요청이 새로 들어롤 때마다 매번 새로운 객체를 반환해줌.</p>
+    <p></p>
+</details>
+
+<details>
+    <summary>@Transactional의 작동원리</summary>
+    </br>
+    <p>AOP를 통해 Target을 상속한 Proxy 객체가 됨.</p>
+    <p>Target 메소드 전후로 Transaction을 수행함.</p>
+    <p></p>
+</details>
+
+<details>
+    <summary>@Transaction에서 ReadOnly 속성을 사용하는 이유</summary>
+    </br>
+    <p>트랜잭션 내부에서 수정, 삭제 등의 목적이 아닐 때 사용함.</p>
+    <p>영속성 콘텍스트에서 엔티티를 관리할 필요 없음 -> readOnly를 통해 메모리 절약 가능</p>
+</details>
+
+<details>
+    <summary>JPA N+1 문제란, 해결방안. </summary>
+    </br>
+    <p>N + 1 문제 : 하나의 query를 날렸을 때 N개의 추가적인 query가 발생하는 문제.</p>
+    <p>해결 방안</p>
+    <P>1. Fetch join : 미리 두 테이블을 조인하여 한 번에 모든 데이터를 가져옴</p>
+    <P>2. @Entity Graph : attributePaths 속성에 연관 조회할 Entity 명을 적으면 됨.</p>
+    <P>주의점 : Catesian Product로 인한 중복값 발생 가능성</p>
+    <P>Distinct(SQL) or set(Java)을 통해 해결</p>
 </details>
 
 ## Data Structure
