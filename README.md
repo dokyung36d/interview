@@ -209,6 +209,12 @@
 ## Spring백엔드
 
 <details>
+    <summary>test</summary>
+    </br>
+    <p>test</p>
+</details>
+
+<details>
     <summary>Web Application Server와 Web Server의 차이점</summary>
     </br>
     <P>Web Application Server : 비즈니스 로직을 넣을 수 있음. 주로 동적인 컨텐츠를 담당함(DB 접근, 데이터 처리)</p>
