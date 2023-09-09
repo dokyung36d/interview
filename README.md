@@ -346,7 +346,8 @@
     <summary>@Transaction에서 ReadOnly 속성을 사용하는 이유</summary>
     </br>
     <p>트랜잭션 내부에서 수정, 삭제 등의 목적이 아닐 때 사용함.</p>
-    <p>영속성 콘텍스트에서 엔티티를 관리할 필요 없음 -> readOnly를 통해 메모리 절약 가능</p>
+    <p>영속성 콘텍스트에서 엔티티를 관리할 필요 없음 -> readOnly를 통해 메모리 절약 가능(변경 감지를 위한 SnapShot을 보관하지 않음)</p>
+    <p>readOnly 옵션을 활성화하지 않는 경우 변경 사항에 대해 쓰기 지연 저장소에 저장함. 그 후 일괄적으로 flush를 함.</p>
 </details>
 
 <details>
